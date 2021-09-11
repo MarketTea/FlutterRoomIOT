@@ -7,6 +7,7 @@ import '../res_util.dart';
 
 class RoomRes {
   final _dio = Dio();
+
   Future<RoomApi> getAllRoom() async {
     final header = ResUtil.getHeader();
     final res =
@@ -16,10 +17,11 @@ class RoomRes {
     }
     return null;
   }
+
   Future<RoomModel> getRoomDetail(String roomId) async {
     final header = ResUtil.getHeader();
-    final res =
-        await _dio.get(Endpoint.getRoomDetail(roomId), options: Options(headers: header));
+    final res = await _dio.get(Endpoint.getRoomDetail(roomId),
+        options: Options(headers: header));
     if (res.statusCode == 200) {
       return RoomModel.fromJson(res.data);
     }

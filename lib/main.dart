@@ -8,7 +8,7 @@ import 'services/io.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await IO.getInstance();
-  Intl.defaultLocale = "vi";
+  //Intl.defaultLocale = "vi";
   runApp(
     OKToast(
       child: App(),

@@ -6,6 +6,7 @@ import '../res_util.dart';
 
 class UserRes {
   final _dio = Dio();
+
   Future<UserApi> getAllUser() async {
     final header = ResUtil.getHeader();
     final res = await _dio.get(

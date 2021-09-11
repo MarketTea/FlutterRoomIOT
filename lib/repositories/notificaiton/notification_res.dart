@@ -8,6 +8,7 @@ import '../res_util.dart';
 
 class NotificationRes {
   final _dio = Dio();
+
   Future<NotificationApi> getNotification(
     int page,
   ) async {
